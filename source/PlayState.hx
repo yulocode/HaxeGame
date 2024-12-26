@@ -5,13 +5,13 @@ import flixel.text.FlxText;
 
 class PlayState extends FlxState
 {
-	var text = new FlxText(0,0,0, "Yulo É FODA", 10, true);
+	var player:Player;
 	override public function create()
 	{
 		super.create();
 
-		text.screenCenter();
-		add(text);
+		player = new Player(50, 50);
+		add(player);
 	}
 
 	override public function update(elapsed:Float)
